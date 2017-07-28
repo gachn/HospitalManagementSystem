@@ -20,3 +20,6 @@ module.exports.getPasswordByUsername = function(username, callback){
     var query = {username: username};
     User.findOne(query, callback);
 }
+
+
+
