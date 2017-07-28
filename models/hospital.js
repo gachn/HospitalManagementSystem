@@ -14,7 +14,7 @@ var HospitalSchema = mongoose.Schema({
 });
 
 
-var User = module.exports = mongoose.model('User', HospitalSchema);
+var User = module.exports = mongoose.model('Hospital', HospitalSchema);
 
 module.exports.getPasswordByUsername = function(username, callback){
     var query = {username: username};
