@@ -9,4 +9,23 @@ router.get('/', function(req, res, next) {
     res.render('login');
 });
 
+
+router.post('/', function(req, res, next) {
+    console.log("Username " +req.body.uname+"\nPassword : "+req.body.psw);
+    if( checkUser(data)){
+
+        //check
+        //redirect to patient page
+        //
+
+    }
+    else{
+        //error
+    }
+    res.render('login');
+});
+
+
+
+
 module.exports = router;
