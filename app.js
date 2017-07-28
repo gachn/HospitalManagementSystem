@@ -15,8 +15,14 @@ var db = mongoose.connection;
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+<<<<<<< HEAD
 var login = require('./routes/login');
 
+=======
+var dashboard = require('./routes/dashboard');
+var login=require('./routes/login');
+var path = require('path');
+>>>>>>> c7ba6b8aeece9f642ac5b026b88f45cb12690d39
 var app = express();
 
 // view engine setup
@@ -33,8 +39,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+<<<<<<< HEAD
 app.use('/login', login);
 
+=======
+app.use('/login',login);
+app.use('/dashboard',dashboard);
+>>>>>>> c7ba6b8aeece9f642ac5b026b88f45cb12690d39
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
