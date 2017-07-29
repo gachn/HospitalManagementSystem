@@ -5,16 +5,20 @@
     <div>
 
         {{#if user.name}}
-            <h3> Id : {{user.id}}</h3>
-            <input type="text" placeholder="Enter Ptient Name" name="name" value="{{user.name}}" required>
-            <input type="text" placeholder="Enter Ptient Age" name="age" value="{{user.age}}" required>
-            <button type="submit">user</button>
-
-        {{else}}
-
             <input type="text" placeholder="Enter Ptient Id" name="pid" value="{{user.id}}" required>
             <input type="text" placeholder="Enter Ptient Name" name="name" value="{{user.name}}" required>
             <input type="text" placeholder="Enter Ptient Age" name="age" value="{{user.age}}" required>
+            <input type="text" placeholder="Enter Ptient DName" name="dname" value="{{user.detail.name}}" required>
+            <input type="text" placeholder="Enter Ptient DTreat" name="dtreat" value="{{user.detail.treat}}" required>
+            <button type="submit">push</button>
+
+        {{else}}
+            <input type="text" placeholder="Enter Ptient Id" name="pid" value="{{user.id}}" required>
+            <input type="text" placeholder="Enter Ptient Name" name="name" value="{{user.name}}" required>
+            <input type="text" placeholder="Enter Ptient Age" name="age" value="{{user.age}}" required>
+            <input type="text" placeholder="Enter Ptient DName" name="dname" value="{{user.detail.name}}" required>
+            <input type="text" placeholder="Enter Ptient DTreat" name="dtreat" value="{{user.detail.treat}}" required>
+
             <button type="submit">Update</button>
         {{/if}}
 

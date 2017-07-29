@@ -12,7 +12,17 @@ var PatientSchema = mongoose.Schema({
     id : {
         unique : true,
         type : String
-    }
+    },
+    detail :[
+        {
+            name : {
+                type :  String
+            },
+            treat : {
+                type  :String
+            }
+        }
+    ]
 });
 
 
@@ -25,8 +35,23 @@ module.exports.getPatientByUsername = function(username, callback){
     Patient.findOne(query, callback);
 }
 
+
+module.exports.updatePatientDData = function(user,Ddata, callback){
+    Patient.update({ "id" : user.id },    // should be important to "cast"
+        {
+            "$push": {
+                "detail": Ddata
+            }
+        },callback);
+}
+
+
 module.exports.createPatient = function(newPatient, callback){
     newPatient.save(callback);
 }
+
+
+
+
 
 
