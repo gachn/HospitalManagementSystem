@@ -11,27 +11,24 @@ var currentUser = require('./currentUser');
 mongoose.connect('mongodb://localhost/HMS');
 var db = mongoose.connection;
 
-
+const hbs=require('hbs')
 var index = require('./routes/index');
 var users = require('./routes/users');
 var login = require('./routes/login');
-<<<<<<< Updated upstream
 var dashboard = require('./routes/dashboard');
 var logout = require('./routes/logout');
-=======
 var test = require('./routes/test');
 
 
 var dashboard = require('./routes/dashboard');
 var path = require('path');
->>>>>>> Stashed changes
 var app = express();
 
 //global login varialble
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-
+hbs.requirePartials(__dirname+'/views/partials');
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -44,12 +41,9 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/login',login);
 app.use('/dashboard',dashboard);
-<<<<<<< Updated upstream
 app.use('/logout',logout);
-=======
 app.use('/test',test);
 
->>>>>>> Stashed changes
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
