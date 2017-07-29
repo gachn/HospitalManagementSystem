@@ -15,13 +15,12 @@ const hbs=require('hbs')
 var index = require('./routes/index');
 var users = require('./routes/users');
 var login = require('./routes/login');
-var dashboard = require('./routes/dashboard');
 var logout = require('./routes/logout');
 var test = require('./routes/test');
-
-
 var dashboard = require('./routes/dashboard');
-var path = require('path');
+var PDE = require('./routes/patient_data_entry');
+
+
 var app = express();
 
 //global login varialble
@@ -43,7 +42,7 @@ app.use('/login',login);
 app.use('/dashboard',dashboard);
 app.use('/logout',logout);
 app.use('/test',test);
-
+app.use('/patient_data_entry',PDE);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
