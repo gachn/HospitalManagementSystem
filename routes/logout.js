@@ -6,10 +6,8 @@ var router = express.Router();
 var currentUser=require('../currentUser');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    if(currentUser.getID()==null)
-        res.redirect('login');
-    else
-    res.render('dashboard.hbs',{title : currentUser.getID()});
+    currentUser.setID(null);
+    res.send('logout successfully');
 });
 
 module.exports = router;
