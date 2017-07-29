@@ -43,6 +43,7 @@ app.use('/login',login);
 app.use('/dashboard',dashboard);
 app.use('/logout',logout);
 app.use('/test',test);
+app.use('/patientSearch',patientSearch);
 
 
 // catch 404 and forward to error handler
