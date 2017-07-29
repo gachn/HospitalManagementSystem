@@ -13,8 +13,12 @@
     "hbs": "~4.0.1",
     "mongodb": "^2.2.30",
     "mongoose": "^4.11.4",
+<<<<<<< Updated upstream
     "morgan": "~1.8.1",
+=======
+    "morgan": "^1.8.2",
+>>>>>>> Stashed changes
     "passport": "^0.3.2",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "^2.4.3"
   }
 }

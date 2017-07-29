@@ -14,12 +14,13 @@ var HospitalSchema = mongoose.Schema({
 });
 
 
-var User = module.exports = mongoose.model('Hospital', HospitalSchema);
+var User = module.exports = mongoose.model('hospital', HospitalSchema);
 
 module.exports.getPasswordByUsername = function(username, callback){
     var query = {username: username};
     User.findOne(query, callback);
 }
+
 
 
 

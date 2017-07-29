@@ -15,8 +15,16 @@ var db = mongoose.connection;
 var index = require('./routes/index');
 var users = require('./routes/users');
 var login = require('./routes/login');
+<<<<<<< Updated upstream
 var dashboard = require('./routes/dashboard');
 var logout = require('./routes/logout');
+=======
+var test = require('./routes/test');
+
+
+var dashboard = require('./routes/dashboard');
+var path = require('path');
+>>>>>>> Stashed changes
 var app = express();
 
 //global login varialble
@@ -36,7 +44,12 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/login',login);
 app.use('/dashboard',dashboard);
+<<<<<<< Updated upstream
 app.use('/logout',logout);
+=======
+app.use('/test',test);
+
+>>>>>>> Stashed changes
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
