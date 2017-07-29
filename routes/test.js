@@ -47,10 +47,10 @@ module.exports = router;
 
 router.post('/update', function(req, res, next) {
 
-    console.log("Updating Info \n.Patient Id :  " +req.body.id);
+    console.log("Updating Info \nPatient Id :  " +req.body.pid);
 
     var name  =  req.body.name;
-    var id = req.body.id;
+    var id = req.body.pid;
     var age = req.body.age;
 
     var newPatient = new models_user({
@@ -64,10 +64,11 @@ router.post('/update', function(req, res, next) {
             //return done(err);
             console.log('Error while updating inserting');
             throw err;
+
         }
         else{
             console.log('Patient Data Uppdated');
-            res.redirect('dashboard');
+            res.redirect('/dashboard');
         }
     });
 
