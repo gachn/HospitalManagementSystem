@@ -33,7 +33,32 @@
 </head>
 
 <body>
+<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+    <form class="modal-content animate" action="/action_page.php">
+        <div class="containerxyz">
+            <label><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="uname" required>
+            <label><b>Age</b></label>
+            <input type="text" placeholder="Enter Age" name="uage" required>
+            <label><b>DOB(DD/MM/YY)</b></label>
+            <input type="text" placeholder="Enter dob" name="udob" required>
+            <label><b>Gender</b></label>
+            <input type="text" placeholder="Enter gender" name="ugender" required>
+            <label><b>Address</b></label>
+            <input type="text" placeholder="Enter address" name="uaddress" required>
+            <label><b>Phone Number</b></label>
+            <input type="text" placeholder="Enter Phone Number" name="uphone" required>
+            <label><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" required>
 
+            <div class="clearfix">
+                <button type="submit" class="signupbtn">Sign Up</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Close</button>
+            </div>
+        </div>
+    </form>
+</div>
 <div id="wrapper">
 
     <!-- Navigation -->
@@ -114,7 +139,9 @@
                     <a href="#"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a href="/patientSearch"><i class="fa fa-fw fa-user-plus"></i>Patients</a>
+                    <a onclick="document.getElementById('id01').style.display='block'">
+                        <i class="fa fa-fw fa-dashboard"></i>Patients</a>
+
                 </li>
             </ul>
         </div>
