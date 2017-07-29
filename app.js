@@ -18,9 +18,12 @@ var login = require('./routes/login');
 var dashboard = require('./routes/dashboard');
 var logout = require('./routes/logout');
 var test = require('./routes/test');
-var PDE = require('./routes/patient_data_entry');
 
+
+var dashboard = require('./routes/dashboard');
+var path = require('path');
 var app = express();
+
 //global login varialble
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,7 +43,6 @@ app.use('/login',login);
 app.use('/dashboard',dashboard);
 app.use('/logout',logout);
 app.use('/test',test);
-app.use('/patient_data_entry',PDE);
 
 
 // catch 404 and forward to error handler
