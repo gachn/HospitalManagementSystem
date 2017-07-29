@@ -7,7 +7,7 @@ var currentUser=require('../currentUser');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
     currentUser.setID(null);
-    res.send('logout successfully');
+    res.redirect('login');
 });
 
 module.exports = router;

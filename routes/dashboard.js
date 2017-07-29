@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
     if(currentUser.getID()==null)
         res.redirect('login');
     else
-    res.render('dashboard.hbs',{title : currentUser.getID()});
+    res.render('dashboard.hbs',{title : currentUser.getID().username+' |Dashboard '});
 });
 
 module.exports = router;
