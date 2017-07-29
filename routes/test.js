@@ -13,6 +13,25 @@ router.get('/', function(req, res, next) {
 
 
 
+router.get('/count', function(req, res, next) {
+    var MongoClient = require('mongodb').MongoClient;
+    var url = "mongodb://localhost:27017/HMS";
+
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        db.collection("patients").findOne({id : '123'}, function(err, result) {
+            if (err) throw err;
+            console.log(result.detail);
+
+            //db.close();
+            res.render('testupdate',{data1 : result.detail});
+        });
+    });
+
+});
+
+
+
 
 router.post('/', function(req, res, next) {
     console.log("Patient Id :  " +req.body.pid);
@@ -105,7 +124,7 @@ router.post('/update', function(req, res, next) {
                 else {
 
                     console.log('WOW ::::::::::))))))))))))))');
-                    res.redirect('dashboard');
+                    res.redirect('../dashboard');
                 }
 
             })
