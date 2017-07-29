@@ -7,58 +7,48 @@ $(function() {
         element: 'morris-area-chart',
         data: [{
             period: '2010 Q1',
-            iphone: 2666,
-            ipad: null,
-            itouch: 2647
+            PatientCame: 2000,
+            patientRecovered: 1950,
         }, {
             period: '2010 Q2',
-            iphone: 2778,
-            ipad: 2294,
-            itouch: 2441
+            PatientCame: 2500,
+            patientRecovered: 2350,
         }, {
             period: '2010 Q3',
-            iphone: 4912,
-            ipad: 1969,
-            itouch: 2501
+            PatientCame: 2800,
+            patientRecovered: 2750,
         }, {
             period: '2010 Q4',
-            iphone: 3767,
-            ipad: 3597,
-            itouch: 5689
+            PatientCame: 2200,
+            patientRecovered: 1950,
         }, {
             period: '2011 Q1',
-            iphone: 6810,
-            ipad: 1914,
-            itouch: 2293
+            PatientCame: 2100,
+            patientRecovered: 2034,
         }, {
             period: '2011 Q2',
-            iphone: 5670,
-            ipad: 4293,
-            itouch: 1881
+            PatientCame: 1700,
+            patientRecovered: 1350,
         }, {
             period: '2011 Q3',
-            iphone: 4820,
-            ipad: 3795,
-            itouch: 1588
+            PatientCame: 2011,
+            patientRecovered: 1940,
         }, {
             period: '2011 Q4',
-            iphone: 15073,
-            ipad: 5967,
-            itouch: 5175
+            PatientCame: 2800,
+            patientRecovered: 2750,
         }, {
             period: '2012 Q1',
-            iphone: 10687,
-            ipad: 4460,
-            itouch: 2028
+            PatientCame: 3000,
+            patientRecovered: 2950,
         }, {
             period: '2012 Q2',
-            iphone: 8432,
-            ipad: 5713,
-            itouch: 1791
+            PatientCame: 3200,
+            patientRecovered: 3150,
         }],
         xkey: 'period',
-        ykeys: ['iphone', 'ipad', 'itouch'],
-        labels: ['iPhone', 'iPad', 'iPod Touch'],
+        ykeys: ['PatientCame', 'patientRecovered'],
+        labels: ['PatientCame', 'patientRecovered'],
         pointSize: 2,
         hideHover: 'auto',
         resize: true
