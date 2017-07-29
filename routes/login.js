@@ -4,6 +4,7 @@
 var express = require('express');
 var models_user = require('../models/hospital');
 var router = express.Router();
+var currentUser = require('../currentUser');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('login');
@@ -33,6 +34,7 @@ router.post('/', function(req, res, next) {
         }
         else if(user.password == req.body.psw ) {
             console.log('success');
+            currentUser.setID(user);
             res.redirect('dashboard');
         }
         else{
