@@ -1,31 +1,41 @@
 {{>header}}
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
 
-<div id="id01" class="modal">
-    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
-    <form class="modal-content animate" action="/action_page.php">
-        <div class="containerxyz">
-            <label><b>Name</b></label>
-            <input type="text" placeholder="Enter Name" name="uname" required>
-            <label><b>Age</b></label>
-            <input type="text" placeholder="Enter Age" name="uage" required>
-            <label><b>DOB(DD/MM/YY)</b></label>
-            <input type="text" placeholder="Enter dob" name="udob" required>
-            <label><b>Gender</b></label>
-            <input type="text" placeholder="Enter gender" name="ugender" required>
-            <label><b>Address</b></label>
-            <input type="text" placeholder="Enter address" name="uaddress" required>
-            <label><b>Phone Number</b></label>
-            <input type="text" placeholder="Enter Phone Number" name="uphone" required>
-            <label><b>Email</b></label>
-            <input type="email" placeholder="Enter Email" name="email" required>
+<div class="col-lg-12 container-fluid" style="height: 550px; background-color: rgb(255,254,251);position: fixed">
 
-            <div class="clearfix">
-                <button type="submit" class="signupbtn">Sign Up</button>
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Close</button>
+    <div style="width:700px; margin:0 auto; padding: 30px">
+
+        <form class="form-inline bg-primary" style="padding: 20px; min-width: 23em">
+            <h3 class="text-center">New Patient Registration</h3>
+            <div class="form-group">
+                <input type="number" class="form-control" id="aadhar" style="width: 20em; margin: 5px" placeholder="Aadhar Number" required>
             </div>
-        </div>
-    </form>
-</div>
+            <div class="form-group">
+                <input type="text" class="form-control" style=" width: 20em; margin: 5px;overflow: hidden" id="Name" placeholder="Full Name" required>
+            </div>
 
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" style="width: 20em; margin: 5px" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+                <input type="date" class="form-control" id="dob" style="width: 20em; margin: 5px" placeholder="Date of Birth" required>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="Age" style="width: 20em; margin: 5px" placeholder="Age" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="gender" style="width: 20em; margin: 5px" placeholder="Gender(M | F)" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" class="form-control" id="phone" style="width: 20em; margin: 5px" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="address" style="width: 20em; margin: 5px" placeholder="Home Address" required>
+            </div>
+
+            <button type="submit" class="btn btn-success" style="width: 20em; margin: 5px">Record</button>
+        </form>
+
+    </div>
+
+</div>
 {{>footer}}

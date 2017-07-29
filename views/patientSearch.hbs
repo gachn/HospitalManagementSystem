@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{{>header}}
+<div class="col-lg-12 container-fluid" style="height: 550px; background-color: rgb(255,254,251);position: fixed">
+    <div style="width:700px; margin:0 auto; padding: 30px">
+<form action="/patientSearch" method="post" class="bg-info form-inline">
 
+    <center><label for="pid" class="text-danger"><h4>Patient ID</h4></label></center>
+    <input type="text" name="pid" required>
 
-<head>
-    <title> Patient Manager </title>
-</head>
-
-{{> header }}
-
-<body>
-<form action="/action_page.php" method="post">
-  Patient Id: <input type="text" name="pid" required>
-  <input type="submit" value="Submit">
+    <Button type="submit" value="Submit">Fetch</Button>
 </form>
-</body>
-</html>
+</div>
+</div>
+{{>footer}}

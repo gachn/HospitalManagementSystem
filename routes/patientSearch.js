@@ -10,5 +10,10 @@ var currentUser=require('../currentUser');
 router.get('/', function(req, res, next) {
     res.render('patientSearch');
 });
+router.post('/', function(req, res, next) {
+    res.render('patient_data_entry.hbs',{
+        id : req.body.pid
+    });
+});
 
 module.exports = router;
