@@ -77,7 +77,21 @@ router.post('/update', function(req, res, next) {
             user1 = {id: req.body.pid};
             console.log('Patient not found with this id');
             console.log(user1);
-            res.render('testupdate', {user: user1});
+
+            models_user.createPatient(newPatient,function(err,user){
+                if (err) {
+                    //return done(err);
+                    console.log('Error while updating inserting');
+                    throw err;
+
+                }
+                else{
+                    console.log('Patient Data Uppdated');
+                    res.render('testupdate', {user: user1});
+                }
+            });
+
+
         }
         else if (user) {
 
