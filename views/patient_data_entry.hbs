@@ -4,29 +4,34 @@
 
     <div style="width:700px; margin:0 auto; padding: 30px">
 
-        <form class="form-inline bg-primary" style="padding: 20px; min-width: 23em">
-            <h3 class="text-center">New Patient Registration</h3>
+        <form action="/patientSearch/insertData" method="post" class="form-inline bg-primary" style="padding: 20px; min-width: 23em">
+            <h3 class="text-center">Patient {{user.id}} Registration</h3>
+
             <div class="form-group">
-                <input type="text" class="form-control" style=" width: 20em; margin: 5px;overflow: hidden" id="Name" placeholder="Full Name" required>
+                <input type="text" class="form-control" style=" width: 20em; margin: 5px;overflow: hidden; visibility: hidden"  id="Name" name="pid" value = "{{user.id}}"placeholder="Full Name" required>
             </div>
 
             <div class="form-group">
-                <input type="email" class="form-control" id="email" style="width: 20em; margin: 5px" placeholder="Email Address" required>
+                <input type="text" class="form-control" style=" width: 20em; margin: 5px;overflow: hidden" id="Name" name="name" placeholder="Full Name" required>
+            </div>
+
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" name="email" style="width: 20em; margin: 5px" placeholder="Email Address" required>
             </div>
             <div class="form-group">
-                <input type="date" class="form-control" id="dob" style="width: 20em; margin: 5px" placeholder="Date of Birth" required>
+                <input type="date" class="form-control" id="dob" name="dob" style="width: 20em; margin: 5px" placeholder="Date of Birth" required>
             </div>
             <div class="form-group">
-                <input type="number" class="form-control" id="Age" style="width: 20em; margin: 5px" placeholder="Age" required>
+                <input type="number" class="form-control" id="Age" name="age" style="width: 20em; margin: 5px" placeholder="Age" required>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" id="gender" style="width: 20em; margin: 5px" placeholder="Gender(M | F)" required>
+                <input type="text" class="form-control" id="gender" name="gender" style="width: 20em; margin: 5px" placeholder="Gender(M | F)" required>
             </div>
             <div class="form-group">
-                <input type="tel" class="form-control" id="phone" style="width: 20em; margin: 5px" placeholder="Phone Number" required>
+                <input type="tel" class="form-control" id="phone" name="phone" style="width: 20em; margin: 5px" placeholder="Phone Number" required>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" id="address" style="width: 20em; margin: 5px" placeholder="Home Address" required>
+                <input type="text" class="form-control" id="address" name="addr" style="width: 20em; margin: 5px" placeholder="Home Address" required>
             </div>
 
             <button type="submit" class="btn btn-success" style="width: 20em; margin: 5px">Record</button>

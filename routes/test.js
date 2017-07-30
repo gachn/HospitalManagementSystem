@@ -3,6 +3,7 @@
  */
 var express = require('express');
 var models_user = require('../models/patient');
+var models_user_det = require('../models/PatientDetail');
 var router = express.Router();
 
 
@@ -23,8 +24,8 @@ router.get('/count', function(req, res, next) {
             if (err) throw err;
             console.log(result.detail);
 
-            //db.close();
-            res.render('testupdate',{data1 : result.detail});
+            db.close();
+            res.send(result.detail);
         });
     });
 
@@ -74,10 +75,14 @@ router.post('/update', function(req, res, next) {
     var dname = req.body.dname;
     var dtreat = req.body.dtreat;
 
-    var Ddata = {
-        name : dname,
-        treat : dtreat
-    };
+    var Ddata = new models_user_det({
+        pid : id,
+        dname : "d1",
+        date : "25/06/1589",
+        hosName : dtreat,
+        dis : dname
+
+    });
 
     var newPatient = new models_user({
         name : name,
@@ -117,7 +122,7 @@ router.post('/update', function(req, res, next) {
             console.log(user);
             console.log(Ddata);
 
-            models_user.updatePatientDData(user, Ddata, function (err, user) {
+            models_user_det.createPatient(Ddata, function (err, user) {
                 if (err) {
                     throw err;
                 }

@@ -13,7 +13,25 @@ var PatientSchema = mongoose.Schema({
         unique : true,
         type : String
     },
-    detail :[
+    email : {
+        type : String
+    },
+    dob : {
+        type : String
+    },
+    gender : {
+        type : String
+    },
+    phone : {
+        type : String
+    },
+    addr : {
+        type : String
+    },
+    regYear : {
+        type : String
+    },
+    detail:[
         {
             name : {
                 type :  String
