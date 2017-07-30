@@ -2,14 +2,18 @@
 
 <div class="bg-success">
 
+    <h1>Patient Details : </h1>
+
     {{#each data}}
-        <h1>{{@pid}}: {{this.pid}}
-        {{@doa}}: {{this.doa}}
-        {{@dname}}: {{this.danme}}
-        {{@status}}: {{this.status}}
-        {{@prescription}}: {{this.prescription}}
-        {{@hosname}}: {{this.hosname}}
-        {{@ndoa}}: {{this.ndoa}}
+        <h4>Patient Id : {{@pid}}:{{this.pid}}</h4>
+        <h4>Date : {{@doa}}: {{this.doa}}</h4>
+        <h4>Disease : {{@dname}}: {{this.dname}}</h4>
+        <h4>Status : {{@status}}: {{this.status}}</h4>
+        <h4>Prescription : {{@prescription}}: {{this.prescription}}</h4>
+        <h4> Hospital Name : {{@hosname}}: {{this.hosname}} </h4>
+        <h4> Next Date : {{@ndoa}}: {{this.ndoa}} </h4>
+
+        <br>
 
     {{/each}}
 
