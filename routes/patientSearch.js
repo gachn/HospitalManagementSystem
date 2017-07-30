@@ -5,6 +5,8 @@ var express = require('express');
 var router = express.Router();
 var currentUser=require('../currentUser');
 var models_user = require('../models/patient');
+var cp=require('../currentPatient');
+
 /* GET users listing. */
 
 
@@ -16,7 +18,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
 
     console.log("Patient Id :  " +req.body.pid);
-
+    cu.setID(req.body.pid);
     models_user.getPatientByUsername(req.body.pid, function (err, user) {
         if (err) {
             //return done(err);
