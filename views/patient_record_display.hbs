@@ -1,9 +1,9 @@
 {{>header}}
 </div>
-<link rel="stylesheet" href="stylesheets/cardstyle.css">
+<link rel="stylesheet" href="/stylesheets/cardstyle.css">
 <div class="container pull-left col-lg-12"  style="height: 550px; background-color: rgb(255,254,251);position: fixed">
     <div class="row col-lg-2"></div>
-    <li class="row pull-left col-lg-4">
+    <div class="row pull-left col-lg-4">
 
         <!-- Contenedor -->
         <ul id="accordion" class="accordion">
@@ -21,30 +21,35 @@
                     <li><a href="">Email : {{data.user.email}}</a></li>
                     <li><a href="#">Phone : {{data.user.phone}}</a></li>
                 </ul>
+                <form action="/seeHistory" method="get">
+                <button type="submit">See History</button>
+                </form>
             </li>
-            <li>
-                <div class="link"><i class="fa fa-heart-o"></i>Diseases<i class="fa fa-chevron-down"></i></div>
-                <ul class="submenu">
-                    <li>
+            <!--<li>-->
+                <!--<div class="link"><i class="fa fa-heart-o"></i>Diseases<i class="fa fa-chevron-down"></i></div>-->
+                <!--<ul class="submenu">-->
+                    <!--<li>-->
+                        <!--{{data.ddata}}-->
+                        <!--<a href="#">-->
+                        <!--&lt;!&ndash;{{#each data}}&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="tags">&ndash;&gt;-->
+                                <!--&lt;!&ndash;{{ddata}}&ndash;&gt;-->
+                        <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;{{/each}}&ndash;&gt;-->
+                        <!--</a>-->
 
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<div class="link"><i class="fa fa-picture-o"></i>Photos <small>1,120</small><i class="fa fa-chevron-down"></i></div>-->
+                <!--<ul class="submenu">-->
 
-                        {{data.ddata}}
-                        <a href="#">
-                        {{#each data}}
-                        <li>{{ddata}}</li>
-                        {{/each}}
-                        </a>
-                </ul>
-            </li>
-            <li>
-                <div class="link"><i class="fa fa-picture-o"></i>Photos <small>1,120</small><i class="fa fa-chevron-down"></i></div>
-                <ul class="submenu">
+                <!--</ul>-->
+            <!--</li>-->
+            <!--<li><div class="link"><i class="fa fa-users"></i>Friends <small>1,053</small><i class="fa fa-chevron-down"></i></div>-->
 
-                </ul>
-            </li>
-            <li><div class="link"><i class="fa fa-users"></i>Friends <small>1,053</small><i class="fa fa-chevron-down"></i></div>
-
-            </li>
+            <!--</li>-->
         </ul>
     </div>
     <div class="col-lg-6">
@@ -84,8 +89,7 @@
         </div>
     </div>
 </div>
-
-<script src="js/cardjs.js"></script>
+<script src="/js/cardjs.js"></script>
 
 </div>
 {{>footer}}

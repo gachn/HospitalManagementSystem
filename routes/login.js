@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
     var id=currentUser.getID();
     if(currentUser.getID()==null)
         res.render('login');
-    else if(id.charAt(0)=='P')
+    else if(id.username.charAt(0)=='P')
         res.redirect('patient_record_show')
     else{
    res.redirect('dashboard');

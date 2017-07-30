@@ -116,7 +116,7 @@ router.post('/insertData', function(req, res, next) {
                 }
                 else{
                     console.log('Patient Data Uppdated');
-                    res.render('patient_record_display', {user: user});
+                    res.render('patient_record_display',{data: {user}} );
                 }
             });
 
@@ -139,7 +139,7 @@ router.post('/insertData', function(req, res, next) {
             //
             // })
 
-            res.render('patient_record_display', {user: user});
+            res.render('patient_record_display', {data: {user}});
 
         }
         else {

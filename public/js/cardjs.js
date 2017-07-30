@@ -2,7 +2,7 @@
  * Created by Gaurav on 7/30/2017.
  */
 $(function() {
-    var Accordion = function(el, multiple) {
+    var accordion = function(el, multiple) {
         this.el = el || {};
         this.multiple = multiple || false;
 

@@ -21,6 +21,7 @@ var test = require('./routes/test');
 var patientSearch = require('./routes/patientSearch');
 var patientRecord = require('./routes/patientRecord');
 var patientHome = require('./routes/patientHome');
+var seeHistory = require('./routes/seeHistory');
 
 var dashboard = require('./routes/dashboard');
 var path = require('path');
@@ -48,7 +49,7 @@ app.use('/test',test);
 app.use('/patientSearch',patientSearch);
 app.use('/patientRecord',patientRecord);
 app.use('/patientHome',patientHome);
-
+app.use('/seeHistory',seeHistory);
 
 
 // catch 404 and forward to error handler
