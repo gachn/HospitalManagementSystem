@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="stylesheets/cardstyle.css">
 <div class="container pull-left col-lg-12"  style="height: 550px; background-color: rgb(255,254,251);position: fixed">
     <div class="row col-lg-2"></div>
-    <div class="row pull-left col-lg-4">
+    <li class="row pull-left col-lg-4">
 
         <!-- Contenedor -->
         <ul id="accordion" class="accordion">
@@ -23,16 +23,17 @@
                 </ul>
             </li>
             <li>
-                <div class="link"><i class="fa fa-heart-o"></i>Deseases<i class="fa fa-chevron-down"></i></div>
+                <div class="link"><i class="fa fa-heart-o"></i>Diseases<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
                     <li>
 
 
                         {{data.ddata}}
-
-                        <a href="#"><span class="tags">Adobe Photoshop</span> <span class="tags">Corel Draw</span> <span class="tags">CSS</span> <span class="tags">Css 3</span>
-                        <span class="tags">Graphic Design</span> <span class="tags">HTML</span> <span class="tags">HTML5</span> <span class="tags">JavaScript</span>
-                        <span class="tags">Twitter bootstrap</span> <span class="tags">bootstrap</span> <span class="tags">User Interface Design</span> <span class="tags">Wordpress</span></li></a>
+                        <a href="#">
+                        {{#each data}}
+                        <li>{{ddata}}</li>
+                        {{/each}}
+                        </a>
                 </ul>
             </li>
             <li>

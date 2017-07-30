@@ -45,7 +45,7 @@ router.post('/', function(req, res, next) {
                 }
                 else{
                     console.log('\n\n\nNumber of Dises : ');
-                    console.log(ddata[0].dname);
+                   // console.log(ddata[0].dname);
                     res.render('patient_record_display', {data: {user,ddata}});
 
                 }

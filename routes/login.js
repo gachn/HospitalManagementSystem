@@ -11,14 +11,9 @@ router.get('/', function(req, res, next) {
     if(currentUser.getID()==null)
         res.render('login');
     else if(id.charAt(0)=='P')
-        res.redirect('patient_record_display')
+        res.redirect('patient_record_show')
     else{
-
-
-
-
-
-        res.redirect('dashboard');
+   res.redirect('dashboard');
     }
 });
 // router.post('/', function(req, res, next) {
