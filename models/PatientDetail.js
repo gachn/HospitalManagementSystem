@@ -6,16 +6,19 @@ var PatientSchema = mongoose.Schema({
     pid : {
         type : String
     },
+    doa : {
+        type : String
+    },
     dname : {
         type : String
     },
-    date : {
+    status : {
         type : String
     },
-    hosName : {
+    prescription : {
         type : String
     },
-    dis : {
+    hosname : {
         type : String
     }
 
