@@ -9,11 +9,17 @@ var currentUser = require('../currentUser');
 router.get('/', function(req, res, next) {
     var id=currentUser.getID();
     if(currentUser.getID()==null)
-    res.render('login');
+        res.render('login');
     else if(id.charAt(0)=='P')
         res.redirect('patient_record_display')
-    else
+    else{
+
+
+
+
+
         res.redirect('dashboard');
+    }
 });
 // router.post('/', function(req, res, next) {
 //

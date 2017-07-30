@@ -8,26 +8,29 @@
         <!-- Contenedor -->
         <ul id="accordion" class="accordion">
             <li>
-                <div class="col col_4">
-                    </div>
-
+                <div class="col col_4"></div>
             </li>
             <li class="default open">
-                <h1 style="color: #371fff;padding: 10px">{{user.name}}</h1>
+                <h1 style="color: #371fff;padding: 10px">{{data.user.name}}</h1>
                 <div class="link"><i class="fa fa-globe"></i>About<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li><a href="#"><i class="left-none"></i> Age : {{user.age}}</a></li>
-                    <li><a href="#"><i class="left-none"></i> Gender : {{user.gender}}</a></li>
-                    <li><a href="#"><i class="left-none"></i> Date of Birth : {{user.dob}}</a></li>
-                    <li><a href="#">Address : {{user.addr}}</a></li>
-                    <li><a href="mailto:gurdeepjawaddi94@gmail.com">Email : {{user.email}}l</a></li>
-                    <li><a href="#">Phone : {{user.phone}}</a></li>
+                    <li><a href="#"><i class="left-none"></i> Age : {{data.user.age}}</a></li>
+                    <li><a href="#"><i class="left-none"></i> Gender : {{data.user.gender}}</a></li>
+                    <li><a href="#"><i class="left-none"></i> Date of Birth : {{data.user.dob}}</a></li>
+                    <li><a href="#">Address : {{data.ddata}}</a></li>
+                    <li><a href="">Email : {{data.user.email}}</a></li>
+                    <li><a href="#">Phone : {{data.user.phone}}</a></li>
                 </ul>
             </li>
             <li>
                 <div class="link"><i class="fa fa-heart-o"></i>Deseases<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                    <li><a href="#"><span class="tags">Adobe Photoshop</span> <span class="tags">Corel Draw</span> <span class="tags">CSS</span> <span class="tags">Css 3</span>
+                    <li>
+
+
+                        {{data.ddata}}
+
+                        <a href="#"><span class="tags">Adobe Photoshop</span> <span class="tags">Corel Draw</span> <span class="tags">CSS</span> <span class="tags">Css 3</span>
                         <span class="tags">Graphic Design</span> <span class="tags">HTML</span> <span class="tags">HTML5</span> <span class="tags">JavaScript</span>
                         <span class="tags">Twitter bootstrap</span> <span class="tags">bootstrap</span> <span class="tags">User Interface Design</span> <span class="tags">Wordpress</span></li></a>
                 </ul>
@@ -50,7 +53,7 @@
                 <h3 class="text-center">Patient Record Entry</h3>
 
                 <div class="form-group">
-                    <label for="doa"><b>Date of Birth</b></label>
+                    <label for="doa"><b>Detail About Patient</b></label>
                     <input type="date" class="form-control" id="doa" name="doa" style="width: 20em; margin: 5px" placeholder="Date of Appointment" required>
                 </div>
 
