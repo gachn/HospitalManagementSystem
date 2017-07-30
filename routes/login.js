@@ -7,8 +7,11 @@ var router = express.Router();
 var currentUser = require('../currentUser');
 /* GET home page. */
 router.get('/', function(req, res, next) {
+    var id=currentUser.getID();
     if(currentUser.getID()==null)
     res.render('login');
+    else if(id.charAt(0)=='P')
+        res.redirect('patient_record_display')
     else
         res.redirect('dashboard');
 });
