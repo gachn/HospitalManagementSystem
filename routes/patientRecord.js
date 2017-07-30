@@ -1,13 +1,11 @@
-/**
- * Created by Gaurav on 7/29/2017.
- */
 var express = require('express');
 var router = express.Router();
+var currentUser=require('../currentUser');
+/* GET users listing. */
 
-/* GET home page. */
+
 router.get('/', function(req, res, next) {
-
-    res.render('patient_record_display');
+    res.render('patientRecord');
 });
 
 module.exports = router;
