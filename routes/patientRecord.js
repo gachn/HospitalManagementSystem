@@ -5,7 +5,7 @@ var currentUser=require('../currentUser');
 
 
 router.get('/', function(req, res, next) {
-    res.render('patientRecord');
+    res.render('patient_record_display');
 });
 
 module.exports = router;
