@@ -1,5 +1,18 @@
 {{>header}}
 
-{{data}}
-Hello
+<div class="bg-success">
+
+    {{#each data}}
+        <h1>{{@pid}}: {{this.pid}}
+        {{@doa}}: {{this.doa}}
+        {{@dname}}: {{this.danme}}
+        {{@status}}: {{this.status}}
+        {{@prescription}}: {{this.prescription}}
+        {{@hosname}}: {{this.hosname}}
+        {{@ndoa}}: {{this.ndoa}}
+
+    {{/each}}
+
+</div>
+
 {{>footer}}

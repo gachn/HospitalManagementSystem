@@ -3,12 +3,15 @@
  */
 var express = require('express');
 var router = express.Router();
-var currentUser=require('../currentUser');
+var currentUser=require('../currentPatient');
 var models_user_det = require('../models/PatientDetail');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     console.log('History ');
-    user=currentUser.getID().id;
+    user=currentUser.getID();
+
+    console.log('\n\n\n\n'+user);
+
     models_user_det.getPatientByUsername(user,function (err,ddata) {
 
         if(err){
@@ -18,9 +21,9 @@ router.get('/', function(req, res, next) {
         }
         else{
             console.log('\n\n\nNumber of Dises : ');
-            // console.log(ddata[0].dname);
-            console.log{}
-            res.render('seeHistory', {data: ddata});
+            console.log(ddata);
+            //console.log{}
+            res.render('seeHistory', {data : ddata});
 
         }
 

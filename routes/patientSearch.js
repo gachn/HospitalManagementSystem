@@ -45,7 +45,7 @@ router.post('/', function(req, res, next) {
                 }
                 else{
                     console.log('\n\n\nNumber of Dises : ');
-                   // console.log(ddata[0].dname);
+                    console.log(ddata[0].dname);
                     res.render('patient_record_display', {data: {user,ddata}});
 
                 }
@@ -116,10 +116,9 @@ router.post('/insertData', function(req, res, next) {
                 }
                 else{
                     console.log('Patient Data Uppdated');
-                    res.render('patient_record_display',{data: {user}} );
+                    res.render('patient_record_display', {data: {user}});
                 }
             });
-
 
         }
         else if (user) {
