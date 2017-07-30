@@ -20,18 +20,21 @@ var PatientSchema = mongoose.Schema({
     },
     hosname : {
         type : String
+    },
+    ndoa : {
+        type : String
     }
 
 });
 
 
-var Patient = module.exports = mongoose.model('PatientDetails', PatientSchema);
+var PatientDetails = module.exports = mongoose.model('PatientDetails', PatientSchema);
 
 
 
-module.exports.getPatientByUsername = function(username, callback){
-    var query = {pid : username};
-    Patient.find(query, callback);
+module.exports.getPatientByUsername = function(pid, callback){
+    var query = {pid : pid};
+    PatientDetails.find(query, callback);
 };
 
 

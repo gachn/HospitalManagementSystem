@@ -5,6 +5,7 @@ var express = require('express');
 var router = express.Router();
 var currentUser=require('../currentUser');
 var models_user = require('../models/patient');
+var models_user_det = require('../models/PatientDetail');
 var cp=require('../currentPatient');
 
 /* GET users listing. */
@@ -18,7 +19,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
 
     console.log("Patient Id :  " +req.body.pid);
-    cu.setID(req.body.pid);
+    cp.setID(req.body.pid);
     models_user.getPatientByUsername(req.body.pid, function (err, user) {
         if (err) {
             //return done(err);
@@ -34,7 +35,23 @@ router.post('/', function(req, res, next) {
         else if(user ) {
             console.log('success123');
             console.log(user);
-            res.render('patient_record_display',{user : user});
+            //res.render('patient_record_display',{user : user});
+
+            models_user_det.getPatientByUsername(user.id,function (err,ddata) {
+
+                if(err){
+
+                    console.log('error  kjdsfkds kjfdsh');
+                }
+                else{
+                    console.log('\n\n\nNumber of Dises : ');
+                    console.log(ddata[0].dname);
+                    res.render('patient_record_display', {data: {user,ddata}});
+
+                }
+
+            });
+
         }
         else{
             console.log('system error');

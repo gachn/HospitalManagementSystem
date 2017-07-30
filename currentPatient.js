@@ -10,7 +10,7 @@ var getID=()=>{
 };
 var setID =(user)=>{
     pid=user;
-    console.log(`Hospital Id set to ${HospitalID}`);
+    //console.log(`Hospital Id set to ${HospitalID}`);
 };
 module.exports={
     getID,setID
